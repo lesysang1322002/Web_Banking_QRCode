@@ -318,9 +318,9 @@
         })
     }
     function start() {
-        var data = new TextEncoder().encode("1");
-        gattCharacteristic.writeValue(data)
-        console.log("Send data: " + data)
+        var sang = new TextEncoder().encode("1");
+        gattCharacteristic.writeValue(sang)
+        console.log("Send data: " + sang)
         gattCharacteristic.startNotifications()
         .then(_ => {
             console.log('Start reading...');
@@ -534,7 +534,7 @@
     const buyerAddress = "";
     let items = [];
     const cancelUrl = "https://translate.google.com/?sl=en&tl=vi&text=AUTHORIZATIONS&op=translate";
-    const returnUrl = "https://lesysang1322002.github.io/Web_Banking_QRCode";
+    const returnUrl = "https://lesysang1322002.github.io/Web_Banking_QRCode/";
     const expiredAt = Math.floor(Date.now() / 1000) + 3600; // Thời gian hết hạn: bây giờ + 1 giờ
     const signatureKey = "64319f6c98c01e5cb254f4304b95c8f3339bfcbb30c8b6e5831902f98c03b094"; // Khóa kiểm tra
 
