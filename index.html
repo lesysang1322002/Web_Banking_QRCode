@@ -318,6 +318,9 @@
         })
     }
     function start() {
+        var data = new TextEncoder().encode("1");
+        gattCharacteristic.writeValue(data)
+        console.log("Send data: " + data)
         gattCharacteristic.startNotifications()
         .then(_ => {
             console.log('Start reading...');
